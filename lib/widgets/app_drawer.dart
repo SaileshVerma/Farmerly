@@ -16,7 +16,7 @@ class AppDrawer extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Text(
-                  "Welcome To Farm Market",
+                  'Welcome To Farm Market',
                   style: TextStyle(
                       color: Colors.white70,
                       fontWeight: FontWeight.bold,
@@ -30,13 +30,13 @@ class AppDrawer extends StatelessWidget {
                 Navigator.of(context).pushNamed('/overviewscreen');
               },
               icon: Icon(Icons.shopping_basket),
-              label: Text("Products")),
+              label: Text('Products')),
         ),
         Divider(),
         ListTile(
           // leading: Text("MyProducts"),
           title: FlatButton.icon(
-              label: Text("MyProducts"),
+              label: Text('MyProducts'),
               icon: Icon(Icons.shopping_cart),
               onPressed: () {
                 Navigator.of(context).pushNamed('/userproductscreen');
@@ -49,7 +49,7 @@ class AppDrawer extends StatelessWidget {
                 Navigator.of(context).pushNamed('/addrequestscreen');
               },
               icon: Icon(Icons.add_box),
-              label: Text("AddRequest")),
+              label: Text('AddRequest')),
         ),
         Divider(),
         ListTile(
@@ -59,7 +59,7 @@ class AppDrawer extends StatelessWidget {
                 Provider.of<Authh>(context).logout();
               },
               icon: Icon(Icons.exit_to_app),
-              label: Text("LogOut")),
+              label: Text('LogOut')),
         ),
         Divider(),
       ]),

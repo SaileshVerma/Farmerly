@@ -62,7 +62,7 @@ class ProductItems extends StatelessWidget {
                   //  Text(location),
                   FlatButton(
                       child: Text(
-                        "View Details",
+                        'View Details',
                         style: TextStyle(
                             color: Colors.green, fontWeight: FontWeight.bold),
                       ),

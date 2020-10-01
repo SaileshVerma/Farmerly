@@ -1,0 +1,7 @@
+include: package:pedantic/analysis_options.yaml
+
+linter:
+  rules:
+    - camel_case_types
+  #You can add more rules as youwish to make your code beautiful
+  #I'am leaving here it up, as per your choice.

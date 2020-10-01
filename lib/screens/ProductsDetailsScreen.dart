@@ -15,7 +15,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
     if (await canLaunch(command)) {
       await launch(command);
     } else {
-      print("couldn place a call");
+      print('couldn place a call');
     }
   }
 

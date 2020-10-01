@@ -1,6 +1,6 @@
 # farmerly
 
-A new Flutter application.
+A new Flutter application. To support farmer-consumer chain, and help country like India, with Farming an most most impacted field of work, a chance to grow using technology.
 
 ## Getting Started
 

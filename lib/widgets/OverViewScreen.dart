@@ -41,12 +41,12 @@ class _OverViewScreenState extends State<OverViewScreen> {
         title: Row(
           children: <Widget>[
             Text(
-              "Farmer",
+              'Farmer',
               style:
                   TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             ),
             Text(
-              "ly",
+              'ly',
               style: TextStyle(color: Colors.white),
             ),
           ],

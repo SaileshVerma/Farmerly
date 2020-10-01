@@ -29,6 +29,8 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
       location: '',
       price: 0,
       phoneno: 0);
+
+  @override
   void dispose() {
     _cont.dispose();
     _focus.dispose();
@@ -48,8 +50,8 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
       return showDialog(
         context: context,
         builder: (ctx) => AlertDialog(
-          title: Text("!! Error"),
-          content: Text("An error ocuured due to somme issue "),
+          title: Text('!! Error'),
+          content: Text('An error ocuured due to somme issue '),
           actions: <Widget>[
             FlatButton(
               child: Text('okay'),
@@ -70,12 +72,12 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text("Add a New Post"),
+        title: Text('Add a New Post'),
         actions: <Widget>[
           IconButton(
             onPressed: () => _saveform(),
             icon: Icon(Icons.send),
-            //label: Text("Post"),
+            //label: Text('Post'),
           )
         ],
       ),

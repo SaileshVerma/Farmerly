@@ -108,11 +108,11 @@ class _AuthCardState extends State<AuthCard> {
     showDialog(
         context: context,
         builder: (ctx) => AlertDialog(
-              title: Text("An error occur"),
+              title: Text('An error occur'),
               content: Text(message),
               actions: <Widget>[
                 FlatButton(
-                  child: Text("Okay"),
+                  child: Text('Okay'),
                   onPressed: () {
                     Navigator.of(ctx).pop();
                   },
@@ -141,7 +141,7 @@ class _AuthCardState extends State<AuthCard> {
 
       // Navigator.of(context).pushReplacementNamed('/overviewscreen');
     } on HttpException catch (error) {
-      var errmsg = "Authentication failed";
+      var errmsg = 'Authentication failed';
       if (error.toString().contains('EMAIL_EXISTS')) {
         errmsg = 'email is already in use';
       } else if (error.toString().contains('INVALID_EMAIL')) {
@@ -155,7 +155,7 @@ class _AuthCardState extends State<AuthCard> {
       }
       showErrDialaog(errmsg);
     } catch (error) {
-      const errmsg = "Could not auth you !! ";
+      const errmsg = 'Could not auth you !! ';
       showErrDialaog(errmsg);
     }
 

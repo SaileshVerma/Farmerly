@@ -55,7 +55,7 @@ class Authh with ChangeNotifier {
       //if response data is not null ie it has get values do this\
 
       _token = responseData['idToken'];
-      _userId = responseData["localId"];
+      _userId = responseData['localId'];
       _expiryDate = DateTime.now().add(
         Duration(
           seconds: int.parse(
@@ -66,7 +66,7 @@ class Authh with ChangeNotifier {
 
       notifyListeners();
     } catch (error) {
-      throw error;
+      return error;
     }
   }
 

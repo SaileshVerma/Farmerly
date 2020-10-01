@@ -7,7 +7,7 @@ class Productss with ChangeNotifier {
   List<Product> _items = [];
 
   List<Product> get items {
-    return [..._items]; //getter for the items of products
+    return _items; //getter for the items of products
   }
 
   Product findById(String id) {
@@ -19,7 +19,7 @@ class Productss with ChangeNotifier {
   Productss(this.authToken, this._items, this.userId);
 
   Future<void> fetchAndSetData([bool filterbyuser = false]) async {
-    final filter = filterbyuser ? 'orderBy="creatorId"&equalTo="$userId"' : " ";
+    final filter = filterbyuser ? 'orderBy="creatorId"&equalTo="$userId"' : ' ';
     final url =
         'https://farmerly-390a0.firebaseio.com/products.json?auth=$authToken&$filter';
 
@@ -30,7 +30,7 @@ class Productss with ChangeNotifier {
     if (extractedData == null) {
       return;
     }
-    final List<Product> loadedproduct = [];
+    List<Product> loadedproduct = [];
     extractedData.forEach((prodId, prodData) {
       loadedproduct.add(Product(
         id: prodId,
@@ -76,7 +76,7 @@ class Productss with ChangeNotifier {
 
       notifyListeners();
     } catch (error) {
-      throw (error);
+      return (error);
     }
   }
 
