@@ -10,7 +10,6 @@ class ProductList extends StatelessWidget {
         Provider.of<Productss>(context); //give access to productsss class
     final product = productData.items; //givve acess to items
     return ListView.builder(
-        addRepaintBoundaries: true,
         padding: EdgeInsets.all(6),
         itemCount: product.length,
         itemBuilder: (ctx, item) => Column(

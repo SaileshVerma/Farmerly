@@ -33,7 +33,7 @@ class Authh with ChangeNotifier {
   Future<void> _authenticate(
       String email, String password, String urlSegment) async {
     final url =
-        'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegment?key=[API_key]';
+        'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegment?key=AIzaSyDEck00lZfJiUAttZ5yT7HGF_edGhvTZoU';
     //this both are genrated by firebase
 
     try {
