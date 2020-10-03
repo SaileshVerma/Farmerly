@@ -36,7 +36,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text("Product : " + loadedProduct.productname,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
             ),
             SizedBox(
               height: 13,
@@ -44,7 +44,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text("Seller's Name: " + loadedProduct.name,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
             ),
             SizedBox(
               height: 13,
@@ -55,11 +55,11 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 children: <Widget>[
                   Text(
                     "Price : ",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                   ),
                   Text(
                     loadedProduct.price.toString(),
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle(fontSize: 17),
                   ),
                 ],
               ),
@@ -73,9 +73,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 children: <Widget>[
                   Text(
                     "Location : ",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                   ),
-                  Text(loadedProduct.location, style: TextStyle(fontSize: 18)),
+                  Text(loadedProduct.location, style: TextStyle(fontSize: 17)),
                 ],
               ),
             ),
@@ -88,10 +88,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 children: <Widget>[
                   Text(
                     "Availability till: ",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                   ),
                   Text(loadedProduct.availability,
-                      style: TextStyle(fontSize: 18)),
+                      style: TextStyle(fontSize: 17)),
                 ],
               ),
             ),
@@ -104,10 +104,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 children: <Widget>[
                   Text(
                     "Contact No. : ",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                   ),
                   Text(loadedProduct.phoneno.toString(),
-                      style: TextStyle(fontSize: 18)),
+                      style: TextStyle(fontSize: 17)),
                 ],
               ),
             ),
@@ -118,14 +118,14 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 0.0),
               child: Text(
                 "Details : ",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 loadedProduct.description,
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 17),
                 softWrap: true,
               ),
             ),
@@ -144,7 +144,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
           color: Colors.white,
         ),
         onPressed: () {
-          callnow("tel: +" + loadedProduct.phoneno.toString());
+          callnow("tel: " + loadedProduct.phoneno.toString());
         },
       ),
     );
