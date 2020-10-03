@@ -13,7 +13,7 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
   final _focus = FocusNode();
 
   final _desc = FocusNode();
-
+  final _nm = FocusNode();
   final _pri = FocusNode();
 
   final _loc = FocusNode();
@@ -23,6 +23,7 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
   final _gkey = GlobalKey<FormState>();
   var _editedprod = Product(
       id: null,
+      name: '',
       productname: '',
       availability: '',
       description: '',
@@ -31,6 +32,7 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
       phoneno: 0);
   void dispose() {
     _cont.dispose();
+    _nm.dispose();
     _focus.dispose();
     _desc.dispose();
     _pri.dispose();
@@ -86,15 +88,37 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
           child: ListView(children: <Widget>[
             TextFormField(
               decoration: InputDecoration(
+                labelText: "Seller's Name",
+              ),
+              textInputAction: TextInputAction.next,
+              onFieldSubmitted: (_) {
+                FocusScope.of(context).requestFocus(_nm);
+              },
+              onSaved: (value) {
+                _editedprod = Product(
+                    id: _editedprod.id,
+                    name: value,
+                    productname: _editedprod.productname,
+                    availability: _editedprod.availability,
+                    description: _editedprod.description,
+                    location: _editedprod.location,
+                    price: _editedprod.price,
+                    phoneno: _editedprod.phoneno);
+              },
+            ),
+            TextFormField(
+              decoration: InputDecoration(
                 labelText: 'ProductName',
               ),
               textInputAction: TextInputAction.next,
+              focusNode: _nm,
               onFieldSubmitted: (_) {
                 FocusScope.of(context).requestFocus(_focus);
               },
               onSaved: (value) {
                 _editedprod = Product(
                     id: _editedprod.id,
+                    name: _editedprod.name,
                     productname: value,
                     availability: _editedprod.availability,
                     description: _editedprod.description,
@@ -117,6 +141,7 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
               onSaved: (value) {
                 _editedprod = Product(
                     id: _editedprod.id,
+                    name: _editedprod.name,
                     productname: _editedprod.productname,
                     availability: _editedprod.availability,
                     description: value,
@@ -138,6 +163,7 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
               onSaved: (value) {
                 _editedprod = Product(
                     id: _editedprod.id,
+                    name: _editedprod.name,
                     productname: _editedprod.productname,
                     availability: _editedprod.availability,
                     description: _editedprod.description,
@@ -158,6 +184,7 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
               onSaved: (value) {
                 _editedprod = Product(
                     id: _editedprod.id,
+                    name: _editedprod.name,
                     productname: _editedprod.productname,
                     availability: _editedprod.availability,
                     description: _editedprod.description,
@@ -178,6 +205,7 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
               onSaved: (value) {
                 _editedprod = Product(
                     id: _editedprod.id,
+                    name: _editedprod.name,
                     productname: _editedprod.productname,
                     availability: value,
                     description: _editedprod.description,
@@ -196,6 +224,7 @@ class _AddRequestScreenState extends State<AddRequestScreen> {
               onSaved: (value) {
                 _editedprod = Product(
                   id: _editedprod.id,
+                  name: _editedprod.name,
                   productname: _editedprod.productname,
                   availability: _editedprod.availability,
                   description: _editedprod.description,

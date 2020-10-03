@@ -20,6 +20,10 @@ class UserProdItem extends StatelessWidget {
           icon: Icon(Icons.delete),
           onPressed: () {
             Provider.of<Productss>(context).deleteProds(prodid);
+            Scaffold.of(context).showSnackBar(SnackBar(
+              content: Text("your request was deleted"),
+              duration: Duration(seconds: 3),
+            ));
           }),
     );
   }

@@ -39,7 +39,15 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             SizedBox(
-              height: 20,
+              height: 13,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Seller's Name: " + loadedProduct.name,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+            ),
+            SizedBox(
+              height: 13,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -57,7 +65,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 13,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -72,7 +80,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 13,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -88,7 +96,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 13,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -104,7 +112,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 13,
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 0.0),

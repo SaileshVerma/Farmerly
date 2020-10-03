@@ -17,6 +17,7 @@ class ProductList extends StatelessWidget {
               children: <Widget>[
                 ProductItems(
                     product[item].id,
+                    product[item].name,
                     product[item].productname,
                     product[item].availability,
                     product[item].location,

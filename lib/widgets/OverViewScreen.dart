@@ -47,7 +47,7 @@ class _OverViewScreenState extends State<OverViewScreen> {
             ),
             Text(
               "ly",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
             ),
           ],
         ),

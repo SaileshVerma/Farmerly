@@ -5,13 +5,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProductItems extends StatelessWidget {
   final String productname;
+  final String name;
   final double price;
   final String id;
   final String availability;
   final String location;
   final int phoneno;
-  ProductItems(this.id, this.productname, this.availability, this.location,
-      this.price, this.phoneno);
+  ProductItems(this.id, this.name, this.productname, this.availability,
+      this.location, this.price, this.phoneno);
   @override
   Widget build(BuildContext context) {
     //final product = Provider.of<Product>(context, listen: false);

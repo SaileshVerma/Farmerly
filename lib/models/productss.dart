@@ -34,6 +34,7 @@ class Productss with ChangeNotifier {
     extractedData.forEach((prodId, prodData) {
       loadedproduct.add(Product(
         id: prodId,
+        name: prodData['name'],
         productname: prodData['productname'],
         availability: prodData['availability'],
         description: prodData['description'],
@@ -65,6 +66,7 @@ class Productss with ChangeNotifier {
 
       final newProd = Product(
           id: json.decode(response.body)['name'],
+          name: prods.name,
           productname: prods.productname,
           availability: prods.availability,
           description: prods.description,
