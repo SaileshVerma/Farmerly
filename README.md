@@ -1,16 +1,12 @@
 # farmerly
 
-A new Flutter application.
+Farmerly is an app develop in flutter  through which farmers  can sell there products and goods  online from  remote area  directly to the consumer .  The app provide an  online platform for both the consumer and the farmer to sell and buy with a reasonable  rate . 
+- It provide an interface between seller and consumer.
 
-## Getting Started
+# Android Version Support
+- Min Android Version 7
+- Max Android Version 10
 
-This project is a starting point for a Flutter application.
+# Build APK File
+The folder Farmerly APK contains the build apk file through which one can install the app in his/her android phone and see the app(farmerly).
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
