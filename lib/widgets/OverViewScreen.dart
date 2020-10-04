@@ -132,9 +132,7 @@ class SearchData extends SearchDelegate<String> {
   Widget buildSuggestions(BuildContext context) {
     //_items.firstWhere((prod) => prod.id == id);
     final productdta = Provider.of<Productss>(context, listen: false).items;
-    final slist = query.isEmpty
-        ? productdta
-        : productdta.where((l) => l.location.contains(query)).toList();
+    final slist = productdta.where((l) => l.location.contains(query)).toList();
 
     return slist.isEmpty
         ? Padding(
