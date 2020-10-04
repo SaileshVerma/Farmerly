@@ -3,14 +3,9 @@ import 'package:provider/provider.dart';
 import 'package:farmerly/models/productss.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ProductDetailScreen extends StatefulWidget {
+class ProductDetailScreen extends StatelessWidget {
   static const routeName = '/productdetailscreen';
 
-  @override
-  _ProductDetailScreenState createState() => _ProductDetailScreenState();
-}
-
-class _ProductDetailScreenState extends State<ProductDetailScreen> {
   void callnow(command) async {
     if (await canLaunch(command)) {
       await launch(command);
@@ -23,13 +18,16 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
   Widget build(BuildContext context) {
     final productId = ModalRoute.of(context).settings.arguments as String;
     final loadedProduct = Provider.of<Productss>(context).findById(productId);
-    // _items.firstWhere((prod) => prod.id == id);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
         title: Text(loadedProduct.productname),
       ),
-      body: SingleChildScrollView(
+      body:
+          //loading
+          //     ? Center(child: CircularProgressIndicator())
+          SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -132,10 +130,6 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
           ],
         ),
       ),
-
-//
-
-//
       floatingActionButton: FloatingActionButton(
         elevation: 9.0,
         backgroundColor: Colors.green,

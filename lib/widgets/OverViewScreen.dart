@@ -14,6 +14,11 @@ class OverViewScreen extends StatefulWidget {
 }
 
 class _OverViewScreenState extends State<OverViewScreen> {
+//  Future<void> _refreshProducts(BuildContext context) async {
+//     await Provider.of<Productss>(context, listen: false)
+//         .fetchAndSetProducts(true);
+//   }
+
   bool _isloading = false;
 
   var _isinit = true;
@@ -96,24 +101,24 @@ class SearchData extends SearchDelegate<String> {
 
   @override
   Widget buildResults(BuildContext context) {
-    final product = Provider.of<Productss>(context)
+    final productdts = Provider.of<Productss>(context, listen: false)
         .items
         .where((q) => q.location.contains(query))
         .toList();
 
     return ListView.builder(
         padding: EdgeInsets.all(6),
-        itemCount: product.length,
+        itemCount: productdts.length,
         itemBuilder: (ctx, item) => Column(
               children: <Widget>[
                 ProductItems(
-                    product[item].id,
-                    product[item].name,
-                    product[item].productname,
-                    product[item].availability,
-                    product[item].location,
-                    product[item].price,
-                    product[item].phoneno),
+                    productdts[item].id,
+                    productdts[item].name,
+                    productdts[item].productname,
+                    productdts[item].availability,
+                    productdts[item].location,
+                    productdts[item].price,
+                    productdts[item].phoneno),
                 Divider(
                   color: Colors.black,
                   height: 4.0,
@@ -121,19 +126,21 @@ class SearchData extends SearchDelegate<String> {
                 )
               ],
             ));
-    ;
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
     //_items.firstWhere((prod) => prod.id == id);
-    final product = Provider.of<Productss>(context).items;
+    final productdta = Provider.of<Productss>(context, listen: false).items;
     final slist = query.isEmpty
-        ? product
-        : product.where((l) => l.location.contains(query)).toList();
+        ? productdta
+        : productdta.where((l) => l.location.contains(query)).toList();
 
     return slist.isEmpty
-        ? Text("could not find the location...")
+        ? Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("could not find the location..."),
+          )
         : ListView.builder(
             itemCount: slist.length,
             itemBuilder: (context, i) => GestureDetector(

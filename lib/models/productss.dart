@@ -56,6 +56,7 @@ class Productss with ChangeNotifier {
       final response = await http.post(url,
           body: json.encode({
             'creatorId': userId,
+            'name': prods.name,
             'productname': prods.productname,
             'availability': prods.availability,
             'description': prods.description,
